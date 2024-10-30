@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Mensual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda Mensual</h1>
+        <div class="form-container">
+            <select id="event-day">
+                <option value="">Selecciona un día</option>
+                <!-- Opciones del 1 al 30 -->
+                <script>
+                    for (let i = 1; i <= 30; i++) {
+                        document.write(<option value="${i}">${i}</option>);
+                    }
+                </script>
+            </select>
+            <input type="text" id="event-name" placeholder="Nombre del Evento" required>
+            <button id="add-event">Agregar Evento</button>
+        </div>
+        <div class="calendar">
+            <h2>Calendario de Octubre</h2>
+            <div id="calendar-grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
